@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{42f2db8a-ee70-4daf-962a-c0c667845dd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{20fbe449-f5c0-46b0-86ad-bf3145ba6c2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\Math">
+      <UniqueIdentifier>{ad214068-2897-48dd-a57f-8bc202aa61b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Math">
+      <UniqueIdentifier>{6251086c-a8f0-450e-a9f9-bdca871ae376}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\Math\Easing.h">
+      <Filter>Header\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Math\GatesMath.h">
+      <Filter>Header\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Math\Matrix.h">
+      <Filter>Header\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Math\Quaternion.h">
+      <Filter>Header\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Math\Vector2.h">
+      <Filter>Header\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Math\Vector3.h">
+      <Filter>Header\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Math\Vector4.h">
+      <Filter>Header\Math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Math\Easing.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Matrix.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Quaternion.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Vector2.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Vector3.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\Vector4.cpp">
+      <Filter>Source\Math</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
