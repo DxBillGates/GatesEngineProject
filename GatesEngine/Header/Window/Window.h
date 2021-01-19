@@ -12,11 +12,14 @@ namespace GatesEngine
 		private:
 			HWND hwnd;
 			WNDCLASSEX wndClass;
+			MSG msg;
 			Vector2 windowSize;
 		public:
 			Window();
 			~Window();
-			HRESULT Create(const Vector2& windowSize,const char* title);
+			bool Create(const Vector2& windowSize,const char* title);
+			void PreviewWindow();
+			bool ProcessMessage();
 
 			HWND GetHandle();
 			HINSTANCE GetInstance();
