@@ -8,5 +8,8 @@
 
 namespace GatesEngine
 {
-	const float PI = 3.14159265f;
+	namespace Math
+	{
+		const float PI = 3.14159265f;
+	}
 }

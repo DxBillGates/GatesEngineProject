@@ -132,6 +132,7 @@
     <ClInclude Include="Header\Math\Vector2.h" />
     <ClInclude Include="Header\Math\Vector3.h" />
     <ClInclude Include="Header\Math\Vector4.h" />
+    <ClInclude Include="Header\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Math\Easing.cpp" />
@@ -140,6 +141,7 @@
     <ClCompile Include="Source\Math\Vector2.cpp" />
     <ClCompile Include="Source\Math\Vector3.cpp" />
     <ClCompile Include="Source\Math\Vector4.cpp" />
+    <ClCompile Include="Source\Window\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

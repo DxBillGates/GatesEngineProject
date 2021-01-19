@@ -1,7 +1,9 @@
 #include "..\..\Header\Math\Matrix.h"
 #include <cmath>
 
-GatesEngine::Matrix4x4::Matrix4x4()
+using Vector3 = GatesEngine::Math::Vector3;
+
+GatesEngine::Math::Matrix4x4::Matrix4x4()
 {
 	for (int i = 0; i < 4; ++i)
 	{
@@ -12,7 +14,7 @@ GatesEngine::Matrix4x4::Matrix4x4()
 	}
 }
 
-GatesEngine::Matrix4x4::Matrix4x4(
+GatesEngine::Math::Matrix4x4::Matrix4x4(
 	float m00, float m01, float m02, float m03,
 	float m10, float m11, float m12, float m13,
 	float m20, float m21, float m22, float m23,
@@ -24,7 +26,7 @@ GatesEngine::Matrix4x4::Matrix4x4(
 {
 }
 
-GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::Identity()
+GatesEngine::Math::Matrix4x4 GatesEngine::Math::Matrix4x4::Identity()
 {
 	Matrix4x4 result
 	{
@@ -37,7 +39,7 @@ GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::Identity()
 	return result;
 }
 
-GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::Scale(const Vector3 & v)
+GatesEngine::Math::Matrix4x4 GatesEngine::Math::Matrix4x4::Scale(const Vector3 & v)
 {
 	Matrix4x4 result
 	{
@@ -50,7 +52,7 @@ GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::Scale(const Vector3 & v)
 	return result;
 }
 
-GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::RotationX(float angle)
+GatesEngine::Math::Matrix4x4 GatesEngine::Math::Matrix4x4::RotationX(float angle)
 {
 	float sin = std::sinf(angle);
 	float cos = std::cosf(angle);
@@ -66,7 +68,7 @@ GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::RotationX(float angle)
 	return result;
 }
 
-GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::RotationY(float angle)
+GatesEngine::Math::Matrix4x4 GatesEngine::Math::Matrix4x4::RotationY(float angle)
 {
 	float sin = std::sinf(angle);
 	float cos = std::cosf(angle);
@@ -82,7 +84,7 @@ GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::RotationY(float angle)
 	return result;
 }
 
-GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::RotationZ(float angle)
+GatesEngine::Math::Matrix4x4 GatesEngine::Math::Matrix4x4::RotationZ(float angle)
 {
 	float sin = std::sinf(angle);
 	float cos = std::cosf(angle);
@@ -98,7 +100,7 @@ GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::RotationZ(float angle)
 	return result;
 }
 
-GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::Translate(const Vector3 & v)
+GatesEngine::Math::Matrix4x4 GatesEngine::Math::Matrix4x4::Translate(const Vector3 & v)
 {
 	Matrix4x4 result
 	{
@@ -111,7 +113,7 @@ GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::Translate(const Vector3 & v)
 	return result;
 }
 
-GatesEngine::Vector3 GatesEngine::Matrix4x4::Transform(const Vector3 & v, const Matrix4x4 & m)
+Vector3 GatesEngine::Math::Matrix4x4::Transform(const Vector3 & v, const Matrix4x4 & m)
 {
 	float w = v.x * m.m[0][3] + v.y * m.m[1][3] + v.z * m.m[2][3] + m.m[3][3];
 
@@ -125,7 +127,7 @@ GatesEngine::Vector3 GatesEngine::Matrix4x4::Transform(const Vector3 & v, const 
 	return result;
 }
 
-GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::Transpose(const Matrix4x4 & m)
+GatesEngine::Math::Matrix4x4 GatesEngine::Math::Matrix4x4::Transpose(const Matrix4x4 & m)
 {
 	Matrix4x4 result;
 	result =
@@ -138,7 +140,7 @@ GatesEngine::Matrix4x4 GatesEngine::Matrix4x4::Transpose(const Matrix4x4 & m)
 	return result;
 }
 
-GatesEngine::Matrix4x4 & GatesEngine::operator*=(Matrix4x4 & m1, const Matrix4x4 & m2)
+GatesEngine::Math::Matrix4x4 & GatesEngine::Math::operator*=(Matrix4x4 & m1, const Matrix4x4 & m2)
 {
 	Matrix4x4 result;
 
@@ -157,13 +159,13 @@ GatesEngine::Matrix4x4 & GatesEngine::operator*=(Matrix4x4 & m1, const Matrix4x4
 	return m1;
 }
 
-GatesEngine::Matrix4x4 GatesEngine::operator*(const Matrix4x4 & m1, const Matrix4x4 & m2)
+GatesEngine::Math::Matrix4x4 GatesEngine::Math::operator*(const Matrix4x4 & m1, const Matrix4x4 & m2)
 {
 	Matrix4x4 result = m1;
 	return result *= m2;
 }
 
-GatesEngine::Vector3 GatesEngine::operator*(const Vector3 & v, const Matrix4x4 & m)
+Vector3 GatesEngine::Math::operator*(const Vector3 & v, const Matrix4x4 & m)
 {
 	return Matrix4x4::Transform(v, m);
 }

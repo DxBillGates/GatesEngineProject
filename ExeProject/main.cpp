@@ -1,5 +1,5 @@
 #include "Math/GatesMath.h"
-#include<Windows.h>
+#include "Window/Window.h"
 
 #ifdef _DEBUG
 #include <crtdbg.h>
@@ -10,5 +10,7 @@ int main()
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
 #endif
+	GatesEngine::Window::Window window;
+	HWND h = window.GetHandle();
 	return 0;
 }

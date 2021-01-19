@@ -1,19 +1,22 @@
 #include "..\..\Header\Math\Quaternion.h"
 #include <cmath>
 
-GatesEngine::Quaternion::Quaternion()
+using Matrix4x4 = GatesEngine::Math::Matrix4x4;
+using Vector3 = GatesEngine::Math::Vector3;
+
+GatesEngine::Math::Quaternion::Quaternion()
 	:
 	x(0), y(0), z(0), w(1)
 {
 }
 
-GatesEngine::Quaternion::Quaternion(float x, float y, float z, float w)
+GatesEngine::Math::Quaternion::Quaternion(float x, float y, float z, float w)
 	:
 	x(x), y(y), z(z), w(w)
 {
 }
 
-GatesEngine::Quaternion::Quaternion(const Vector3 & v, float angle)
+GatesEngine::Math::Quaternion::Quaternion(const Vector3 & v, float angle)
 {
 	float sin, cos;
 	sin = std::sinf(angle / 2.0f);
@@ -24,7 +27,7 @@ GatesEngine::Quaternion::Quaternion(const Vector3 & v, float angle)
 	w = cos;
 }
 
-GatesEngine::Quaternion::Quaternion(const Matrix4x4 & m)
+GatesEngine::Math::Quaternion::Quaternion(const Matrix4x4 & m)
 {
 	Quaternion result;
 	float tr = m.m[0][0] + m.m[1][1] + m.m[2][2] + m.m[3][3];
@@ -55,7 +58,7 @@ GatesEngine::Quaternion::Quaternion(const Matrix4x4 & m)
 	w = qa[3];
 }
 
-GatesEngine::Quaternion GatesEngine::Quaternion::Normalize(const Quaternion & q)
+GatesEngine::Math::Quaternion GatesEngine::Math::Quaternion::Normalize(const Quaternion & q)
 {
 	Quaternion result = q;
 	float length = Length(result);
@@ -67,7 +70,7 @@ GatesEngine::Quaternion GatesEngine::Quaternion::Normalize(const Quaternion & q)
 	return Quaternion();
 }
 
-GatesEngine::Quaternion GatesEngine::Quaternion::Conjugate(const Quaternion & q)
+GatesEngine::Math::Quaternion GatesEngine::Math::Quaternion::Conjugate(const Quaternion & q)
 {
 	Quaternion result = q;
 	result = -result;
@@ -75,21 +78,21 @@ GatesEngine::Quaternion GatesEngine::Quaternion::Conjugate(const Quaternion & q)
 	return result;
 }
 
-float GatesEngine::Quaternion::Dot(const Quaternion & q1, const Quaternion & q2)
+float GatesEngine::Math::Quaternion::Dot(const Quaternion & q1, const Quaternion & q2)
 {
 	float result = 0;
 	result = q1.x * q2.x + q1.y * q2.y + q1.z * q2.z + q1.w * q2.w;
 	return result;
 }
 
-float GatesEngine::Quaternion::Length(const Quaternion & q)
+float GatesEngine::Math::Quaternion::Length(const Quaternion & q)
 {
 	float result = 0;
 	result = std::sqrtf(q.x * q.x + q.y * q.y + q.z * q.z + q.w * q.w);
 	return result;
 }
 
-GatesEngine::Quaternion GatesEngine::Quaternion::Slerp(const Quaternion & q1, const Quaternion & q2, float t)
+GatesEngine::Math::Quaternion GatesEngine::Math::Quaternion::Slerp(const Quaternion & q1, const Quaternion & q2, float t)
 {
 	float cos = Dot(q1, q2);
 	Quaternion t2 = q2;
@@ -110,7 +113,7 @@ GatesEngine::Quaternion GatesEngine::Quaternion::Slerp(const Quaternion & q1, co
 	return q1 * k0 + t2 * k1;
 }
 
-GatesEngine::Quaternion GatesEngine::Quaternion::Lerp(const Quaternion & q1, const Quaternion & q2, float t)
+GatesEngine::Math::Quaternion GatesEngine::Math::Quaternion::Lerp(const Quaternion & q1, const Quaternion & q2, float t)
 {
 	float cos = Dot(q1, q2);
 	Quaternion t2 = q2;
@@ -125,7 +128,7 @@ GatesEngine::Quaternion GatesEngine::Quaternion::Lerp(const Quaternion & q1, con
 	return q1 * k0 + t2 * k1;
 }
 
-GatesEngine::Matrix4x4 GatesEngine::Quaternion::Rotation(const Quaternion & q)
+Matrix4x4 GatesEngine::Math::Quaternion::Rotation(const Quaternion & q)
 {
 	float xx = q.x * q.x * 2.0f;
 	float yy = q.y * q.y * 2.0f;
@@ -146,7 +149,7 @@ GatesEngine::Matrix4x4 GatesEngine::Quaternion::Rotation(const Quaternion & q)
 	return result;
 }
 
-GatesEngine::Vector3 GatesEngine::Quaternion::GetAxis(const Quaternion & q)
+Vector3 GatesEngine::Math::Quaternion::GetAxis(const Quaternion & q)
 {
 	Vector3 result;
 	float x, y, z, length;
@@ -162,12 +165,12 @@ GatesEngine::Vector3 GatesEngine::Quaternion::GetAxis(const Quaternion & q)
 	return result;
 }
 
-GatesEngine::Quaternion GatesEngine::Quaternion::operator+()
+GatesEngine::Math::Quaternion GatesEngine::Math::Quaternion::operator+()
 {
 	return *this;
 }
 
-GatesEngine::Quaternion GatesEngine::Quaternion::operator-()
+GatesEngine::Math::Quaternion GatesEngine::Math::Quaternion::operator-()
 {
 	this->x = -this->x;
 	this->y = -this->y;
@@ -176,7 +179,7 @@ GatesEngine::Quaternion GatesEngine::Quaternion::operator-()
 	return *this;
 }
 
-GatesEngine::Quaternion & GatesEngine::Quaternion::operator+=(const Quaternion & q)
+GatesEngine::Math::Quaternion & GatesEngine::Math::Quaternion::operator+=(const Quaternion & q)
 {
 	this->x += q.x;
 	this->y += q.y;
@@ -185,7 +188,7 @@ GatesEngine::Quaternion & GatesEngine::Quaternion::operator+=(const Quaternion &
 	return *this;
 }
 
-GatesEngine::Quaternion & GatesEngine::Quaternion::operator-=(const Quaternion & q)
+GatesEngine::Math::Quaternion & GatesEngine::Math::Quaternion::operator-=(const Quaternion & q)
 {
 	this->x -= q.x;
 	this->y -= q.y;
@@ -194,7 +197,7 @@ GatesEngine::Quaternion & GatesEngine::Quaternion::operator-=(const Quaternion &
 	return *this;
 }
 
-GatesEngine::Quaternion & GatesEngine::Quaternion::operator*=(float s)
+GatesEngine::Math::Quaternion & GatesEngine::Math::Quaternion::operator*=(float s)
 {
 	this->x *= s;
 	this->y *= s;
@@ -203,12 +206,12 @@ GatesEngine::Quaternion & GatesEngine::Quaternion::operator*=(float s)
 	return *this;
 }
 
-GatesEngine::Quaternion & GatesEngine::Quaternion::operator/=(float s)
+GatesEngine::Math::Quaternion & GatesEngine::Math::Quaternion::operator/=(float s)
 {
 	return *this *= 1.0f / s;
 }
 
-GatesEngine::Quaternion & GatesEngine::Quaternion::operator*=(const Quaternion & q)
+GatesEngine::Math::Quaternion & GatesEngine::Math::Quaternion::operator*=(const Quaternion & q)
 {
 	Quaternion result =
 	{
@@ -221,37 +224,37 @@ GatesEngine::Quaternion & GatesEngine::Quaternion::operator*=(const Quaternion &
 	return *this;
 }
 
-GatesEngine::Quaternion GatesEngine::operator+(const Quaternion & q1, const Quaternion & q2)
+GatesEngine::Math::Quaternion GatesEngine::Math::operator+(const Quaternion & q1, const Quaternion & q2)
 {
 	Quaternion result = q1;
 	return result += q2;
 }
 
-GatesEngine::Quaternion GatesEngine::operator-(const Quaternion & q1, const Quaternion & q2)
+GatesEngine::Math::Quaternion GatesEngine::Math::operator-(const Quaternion & q1, const Quaternion & q2)
 {
 	Quaternion result = q1;
 	return result -= q2;
 }
 
-GatesEngine::Quaternion GatesEngine::operator*(const Quaternion & q1, const Quaternion & q2)
+GatesEngine::Math::Quaternion GatesEngine::Math::operator*(const Quaternion & q1, const Quaternion & q2)
 {
 	Quaternion result = q1;
 	return result *= q2;
 }
 
-GatesEngine::Quaternion GatesEngine::operator*(const Quaternion & q, float s)
+GatesEngine::Math::Quaternion GatesEngine::Math::operator*(const Quaternion & q, float s)
 {
 	Quaternion result = q;
 	return result *= s;
 }
 
-GatesEngine::Quaternion GatesEngine::operator*(float s, const Quaternion & q)
+GatesEngine::Math::Quaternion GatesEngine::Math::operator*(float s, const Quaternion & q)
 {
 	Quaternion result = q;
 	return result *= s;
 }
 
-GatesEngine::Quaternion GatesEngine::operator/(const Quaternion & q, float s)
+GatesEngine::Math::Quaternion GatesEngine::Math::operator/(const Quaternion & q, float s)
 {
 	Quaternion result = q;
 	return result /= s;

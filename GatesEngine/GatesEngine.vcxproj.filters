@@ -13,6 +13,12 @@
     <Filter Include="Source\Math">
       <UniqueIdentifier>{6251086c-a8f0-450e-a9f9-bdca871ae376}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header\Window">
+      <UniqueIdentifier>{7d6f69f8-a7c5-4033-a66d-be3c96e775e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Window">
+      <UniqueIdentifier>{63254316-cacb-4791-9fdf-fbdfff276e41}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Math\Easing.h">
@@ -36,6 +42,9 @@
     <ClInclude Include="Header\Math\Vector4.h">
       <Filter>Header\Math</Filter>
     </ClInclude>
+    <ClInclude Include="Header\Window\Window.h">
+      <Filter>Header\Window</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Math\Easing.cpp">
@@ -55,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="Source\Math\Vector4.cpp">
       <Filter>Source\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Window\Window.cpp">
+      <Filter>Source\Window</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
