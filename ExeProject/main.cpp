@@ -1,5 +1,6 @@
 #include "Math/GatesMath.h"
 #include "Window/Window.h"
+#include "Input/Input.h"
 #include <stdio.h>
 
 #ifdef _DEBUG
@@ -11,20 +12,24 @@ int main()
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
 #endif
-	using Vector2 = GatesEngine::Math::Vector2;
-	using Window = GatesEngine::Window::Window;
+	using namespace GatesEngine::Math;
+	using namespace GatesEngine;
 
 	Window window;
-	window.Create(Vector2(1280,720), "title");
+	window.Create(Vector2(1280, 720), "title");
 	window.PreviewWindow();
 
-	printf("%f\n", window.GetWindowAspect());
-	printf("%f\n", window.GetWindowSize().x);
-	printf("%f\n", window.GetWindowSize().y);
+	Input* input = Input::GetInstance();
+	input->Create(window.GetHandle(), window.GetInstance());
+	input->Initialize();
+
 
 	while (true)
 	{
+		input->Update();
+
 		if (!window.ProcessMessage()) break;
+		if (input->GetKeyboard()->CheckHitKey(Keys::ESC))break;
 	}
 	return 0;
 }

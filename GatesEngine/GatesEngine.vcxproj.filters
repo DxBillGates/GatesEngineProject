@@ -19,6 +19,12 @@
     <Filter Include="Source\Window">
       <UniqueIdentifier>{63254316-cacb-4791-9fdf-fbdfff276e41}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header\Input">
+      <UniqueIdentifier>{74e1c206-45a3-43eb-ad16-7b608fcbf5b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Input">
+      <UniqueIdentifier>{84f69caa-6727-42d9-9077-10e90a56da5a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Math\Easing.h">
@@ -45,6 +51,21 @@
     <ClInclude Include="Header\Window\Window.h">
       <Filter>Header\Window</Filter>
     </ClInclude>
+    <ClInclude Include="Header\Input\Input.h">
+      <Filter>Header\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Input\Keyboard.h">
+      <Filter>Header\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Input\Keys.h">
+      <Filter>Header\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Input\Mouse.h">
+      <Filter>Header\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Input\MouseButtons.h">
+      <Filter>Header\Input</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Math\Easing.cpp">
@@ -67,6 +88,15 @@
     </ClCompile>
     <ClCompile Include="Source\Window\Window.cpp">
       <Filter>Source\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Input\Keyboard.cpp">
+      <Filter>Source\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Input\Input.cpp">
+      <Filter>Source\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Input\Mouse.cpp">
+      <Filter>Source\Input</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

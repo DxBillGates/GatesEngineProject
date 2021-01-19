@@ -125,6 +125,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Header\Input\Input.h" />
+    <ClInclude Include="Header\Input\Keyboard.h" />
+    <ClInclude Include="Header\Input\Keys.h" />
+    <ClInclude Include="Header\Input\Mouse.h" />
+    <ClInclude Include="Header\Input\MouseButtons.h" />
     <ClInclude Include="Header\Math\Easing.h" />
     <ClInclude Include="Header\Math\GatesMath.h" />
     <ClInclude Include="Header\Math\Matrix.h" />
@@ -135,6 +140,9 @@
     <ClInclude Include="Header\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Input\Input.cpp" />
+    <ClCompile Include="Source\Input\Keyboard.cpp" />
+    <ClCompile Include="Source\Input\Mouse.cpp" />
     <ClCompile Include="Source\Math\Easing.cpp" />
     <ClCompile Include="Source\Math\Matrix.cpp" />
     <ClCompile Include="Source\Math\Quaternion.cpp" />

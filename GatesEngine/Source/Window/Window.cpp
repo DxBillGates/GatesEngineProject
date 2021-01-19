@@ -13,16 +13,16 @@ LRESULT CALLBACK WinProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	return DefWindowProc(hwnd, msg, wparam, lparam);
 }
 
-GatesEngine::Window::Window::Window() :hwnd(HWND()), wndClass(WNDCLASSEX()), msg(MSG()), windowSize(Vector2())
+GatesEngine::Window::Window() :hwnd(HWND()), wndClass(WNDCLASSEX()), msg(MSG()), windowSize(Vector2())
 {
 }
 
-GatesEngine::Window::Window::~Window()
+GatesEngine::Window::~Window()
 {
 	UnregisterClass(wndClass.lpszClassName, wndClass.hInstance);
 }
 
-bool GatesEngine::Window::Window::Create(const Vector2 & windowSize, const char * title)
+bool GatesEngine::Window::Create(const Vector2 & windowSize, const char * title)
 {
 	// ウィンドウの設定
 	wndClass.cbSize = sizeof(WNDCLASSEX);
@@ -48,14 +48,14 @@ bool GatesEngine::Window::Window::Create(const Vector2 & windowSize, const char 
 		nullptr,
 		wndClass.hInstance,
 		nullptr);
-		
+
 	this->windowSize = windowSize;
 
 	if (hwnd == NULL)return false;
 	return true;
 }
 
-void GatesEngine::Window::Window::PreviewWindow()
+void GatesEngine::Window::PreviewWindow()
 {
 	ShowWindow(hwnd, SW_SHOW);
 }
@@ -74,22 +74,22 @@ bool GatesEngine::Window::Window::ProcessMessage()
 	return true;
 }
 
-HWND GatesEngine::Window::Window::GetHandle()
+HWND GatesEngine::Window::GetHandle()
 {
 	return hwnd;
 }
 
-HINSTANCE GatesEngine::Window::Window::GetInstance()
+HINSTANCE GatesEngine::Window::GetInstance()
 {
 	return wndClass.hInstance;
 }
 
-Vector2 GatesEngine::Window::Window::GetWindowSize()
+Vector2 GatesEngine::Window::GetWindowSize()
 {
 	return windowSize;
 }
 
-float GatesEngine::Window::Window::GetWindowAspect()
+float GatesEngine::Window::GetWindowAspect()
 {
 	return windowSize.x / windowSize.y;
 }
