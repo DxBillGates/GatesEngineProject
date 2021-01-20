@@ -125,6 +125,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Header\Application\Application.h" />
     <ClInclude Include="Header\Input\Input.h" />
     <ClInclude Include="Header\Input\Keyboard.h" />
     <ClInclude Include="Header\Input\Keys.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="Header\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Application\Application.cpp" />
     <ClCompile Include="Source\Input\Input.cpp" />
     <ClCompile Include="Source\Input\Keyboard.cpp" />
     <ClCompile Include="Source\Input\Mouse.cpp" />

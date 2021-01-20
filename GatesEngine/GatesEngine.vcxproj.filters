@@ -25,6 +25,12 @@
     <Filter Include="Source\Input">
       <UniqueIdentifier>{84f69caa-6727-42d9-9077-10e90a56da5a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header\Application">
+      <UniqueIdentifier>{fa66c1e8-ebca-46b8-b259-31c0be062c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Application">
+      <UniqueIdentifier>{d4bb037d-379d-46ad-90b8-a6b6dfd14b45}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Math\Easing.h">
@@ -66,6 +72,9 @@
     <ClInclude Include="Header\Input\MouseButtons.h">
       <Filter>Header\Input</Filter>
     </ClInclude>
+    <ClInclude Include="Header\Application\Application.h">
+      <Filter>Header\Application</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Math\Easing.cpp">
@@ -97,6 +106,9 @@
     </ClCompile>
     <ClCompile Include="Source\Input\Mouse.cpp">
       <Filter>Source\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Application\Application.cpp">
+      <Filter>Source\Application</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
