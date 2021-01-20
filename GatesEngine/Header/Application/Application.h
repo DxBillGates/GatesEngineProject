@@ -1,6 +1,7 @@
 #pragma once
 #include "..\Input\Input.h"
 #include "..\Window\Window.h"
+#include "..\Scene\SceneManager.h"
 namespace GatesEngine
 {
 	class Application
@@ -9,6 +10,7 @@ namespace GatesEngine
 	protected:
 		Input* input;
 		Window window;
+		SceneManager* sceneManager;
 	public:
 		Application();
 		virtual ~Application();

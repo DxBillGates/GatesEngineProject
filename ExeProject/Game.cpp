@@ -12,17 +12,3 @@ bool Game::LoadContents()
 {
 	return true;
 }
-
-bool Game::Initialize()
-{
-	return true;
-}
-
-bool Game::Update()
-{
-	return true;
-}
-
-void Game::Draw()
-{
-}

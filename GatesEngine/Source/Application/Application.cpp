@@ -1,6 +1,7 @@
 #include "..\..\Header\Application\Application.h"
+#include "..\..\Header\Scene\SceneManager.h"
 
-GatesEngine::Application::Application():window(Window()),input(Input::GetInstance())
+GatesEngine::Application::Application():window(Window()),input(Input::GetInstance()),sceneManager(SceneManager::GetInstance())
 {
 	window.Create(Vector2(1280,720), "test");
 	window.PreviewWindow();
@@ -18,16 +19,19 @@ bool GatesEngine::Application::LoadContents()
 
 bool GatesEngine::Application::Initialize()
 {
+	sceneManager->Initialize();
 	return true;
 }
 
 bool GatesEngine::Application::Update()
 {
+	sceneManager->Update();
 	return true;
 }
 
 void GatesEngine::Application::Draw()
 {
+	sceneManager->Draw();
 }
 
 void GatesEngine::Application::Run()

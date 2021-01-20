@@ -31,6 +31,12 @@
     <Filter Include="Source\Application">
       <UniqueIdentifier>{d4bb037d-379d-46ad-90b8-a6b6dfd14b45}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header\Scene">
+      <UniqueIdentifier>{3c74d154-14a9-4316-b7e6-53f7c17065eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Scene">
+      <UniqueIdentifier>{bdaed25c-0547-4d47-aa4b-7b501aa6327a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Math\Easing.h">
@@ -75,6 +81,12 @@
     <ClInclude Include="Header\Application\Application.h">
       <Filter>Header\Application</Filter>
     </ClInclude>
+    <ClInclude Include="Header\Scene\Scene.h">
+      <Filter>Header\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Scene\SceneManager.h">
+      <Filter>Header\Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Math\Easing.cpp">
@@ -109,6 +121,12 @@
     </ClCompile>
     <ClCompile Include="Source\Application\Application.cpp">
       <Filter>Source\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\Scene.cpp">
+      <Filter>Source\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\SceneManager.cpp">
+      <Filter>Source\Scene</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
