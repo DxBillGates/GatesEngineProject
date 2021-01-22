@@ -23,5 +23,6 @@ namespace GatesEngine
 		HINSTANCE GetInstance();
 		Vector2 GetWindowSize();
 		float GetWindowAspect();
+		void SetWindowTitle(const char* changeTitle);
 	};
 }

@@ -93,3 +93,8 @@ float GatesEngine::Window::GetWindowAspect()
 {
 	return windowSize.x / windowSize.y;
 }
+
+void GatesEngine::Window::SetWindowTitle(const char * changeTitle)
+{
+	SetWindowText(hwnd, changeTitle);
+}

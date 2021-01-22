@@ -10,7 +10,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
 #endif
 	using namespace GatesEngine;
-
 	Game game;
 	game.Run();
 

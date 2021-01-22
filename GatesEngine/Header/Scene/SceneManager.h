@@ -24,7 +24,7 @@ namespace GatesEngine
 	private:
 		SceneManager() = default;
 		SceneManager(const SceneManager&) = delete;
-		~SceneManager() = default;
+		~SceneManager();
 		SceneManager& operator=(const SceneManager&) = delete;
 	};
 }

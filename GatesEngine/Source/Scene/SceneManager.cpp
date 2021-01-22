@@ -70,3 +70,11 @@ void GatesEngine::SceneManager::Draw()
 		currentScene->Draw();
 	}
 }
+
+GatesEngine::SceneManager::~SceneManager()
+{
+	for (auto itr = scenes.begin(); itr != scenes.end(); ++itr)
+	{
+		delete (*itr);
+	}
+}

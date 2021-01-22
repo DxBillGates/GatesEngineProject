@@ -19,19 +19,16 @@ bool GatesEngine::Application::LoadContents()
 
 bool GatesEngine::Application::Initialize()
 {
-	sceneManager->Initialize();
 	return true;
 }
 
 bool GatesEngine::Application::Update()
 {
-	sceneManager->Update();
 	return true;
 }
 
 void GatesEngine::Application::Draw()
 {
-	sceneManager->Draw();
 }
 
 void GatesEngine::Application::Run()
@@ -40,12 +37,15 @@ void GatesEngine::Application::Run()
 	if (!Initialize())return;
 
 	input->Initialize();
+	sceneManager->Initialize();
 
 	while (!input->GetKeyboard()->CheckHitKey(Keys::ESC))
 	{
 		input->Update();
 		if(!Update())break;
+		sceneManager->Update();
 		Draw();
+		sceneManager->Draw();
 		if(!window.ProcessMessage())break;
 	}
 }

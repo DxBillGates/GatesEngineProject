@@ -4,7 +4,7 @@ namespace GatesEngine
 {
 	class Scene
 	{
-	private:
+	protected:
 		const char* sceneName;
 		bool changeNextSceneFlag;
 	public:
