@@ -37,6 +37,8 @@ namespace GatesEngine
 			static Matrix4x4 Translate(const Vector3& v);
 			static Vector3 Transform(const Vector3& v, const Matrix4x4& m);
 			static Matrix4x4 Transpose(const Matrix4x4& m);
+			static Matrix4x4 Inverse(const Matrix4x4& m);
+			static float Determinant(const Matrix4x4& m);
 		};
 		Matrix4x4& operator*=(Matrix4x4& m1, const Matrix4x4& m2);
 		Matrix4x4 operator*(const Matrix4x4& m1, const Matrix4x4& m2);
