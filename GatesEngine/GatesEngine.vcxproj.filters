@@ -37,6 +37,18 @@
     <Filter Include="Source\Scene">
       <UniqueIdentifier>{bdaed25c-0547-4d47-aa4b-7b501aa6327a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header\DirectX">
+      <UniqueIdentifier>{e9e81072-b7e1-478d-87d2-f5c8558a3648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\DiretcX">
+      <UniqueIdentifier>{0005b367-db61-4667-abb5-f4591481dde1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header\DirectX\Resource">
+      <UniqueIdentifier>{fb264b4e-42d1-4d62-9065-0075497779f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\DiretcX\Resource">
+      <UniqueIdentifier>{b1317506-367d-4a7e-9190-7705010dc859}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Math\Easing.h">
@@ -86,6 +98,9 @@
     </ClInclude>
     <ClInclude Include="Header\Scene\SceneManager.h">
       <Filter>Header\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\DirectX\Resource\VertexData.h">
+      <Filter>Header\DirectX\Resource</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

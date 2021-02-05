@@ -126,6 +126,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Header\Application\Application.h" />
+    <ClInclude Include="Header\DirectX\Resource\VertexData.h" />
     <ClInclude Include="Header\Input\Input.h" />
     <ClInclude Include="Header\Input\Keyboard.h" />
     <ClInclude Include="Header\Input\Keys.h" />

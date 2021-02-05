@@ -4,6 +4,8 @@
 
 Game::Game():Application()
 {
+	sceneManager->AddScene(new SampleScene("SampleScene"));
+	sceneManager->ChangeScene("SampleScene");
 }
 
 Game::~Game()
