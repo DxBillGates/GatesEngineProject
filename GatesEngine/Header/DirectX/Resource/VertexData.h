@@ -8,6 +8,7 @@ namespace GatesEngine
 {
 	namespace DirectX
 	{
+		//シェーダーに送るための頂点情報構造体
 		template<typename T>
 		class VertexData
 		{

@@ -6,6 +6,8 @@
 #include "Quaternion.h"
 #include "Easing.h"
 
+//自作数学関係をすべてインクルードしたヘッダー
+//また、補助関数を保持
 namespace GatesEngine
 {
 	namespace Math

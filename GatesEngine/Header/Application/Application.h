@@ -4,6 +4,8 @@
 #include "..\Scene\SceneManager.h"
 namespace GatesEngine
 {
+	//アプリケーションの基底クラス
+	//こいつを継承してExeProjectで使用する
 	class Application
 	{
 		using Vector2 = GatesEngine::Math::Vector2;

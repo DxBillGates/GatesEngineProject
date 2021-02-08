@@ -3,6 +3,7 @@ namespace GatesEngine
 {
 	namespace Math
 	{
+		//イージングチートシート
 		class Easing
 		{
 		public:

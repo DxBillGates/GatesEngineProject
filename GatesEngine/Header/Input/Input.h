@@ -8,6 +8,7 @@
 
 namespace GatesEngine
 {
+	//キーボードやマウスといった入力関係を管理するシングルトンクラス
 	class Input
 	{
 	private:
