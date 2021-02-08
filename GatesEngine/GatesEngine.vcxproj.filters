@@ -49,6 +49,12 @@
     <Filter Include="Source\DiretcX\Resource">
       <UniqueIdentifier>{b1317506-367d-4a7e-9190-7705010dc859}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header\Audio">
+      <UniqueIdentifier>{5968eb87-f327-4206-a331-5a8772adce71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Audio">
+      <UniqueIdentifier>{40f50f65-83c9-4fe0-95c1-12b256ec8bd9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Math\Easing.h">
@@ -102,6 +108,18 @@
     <ClInclude Include="Header\DirectX\Resource\VertexData.h">
       <Filter>Header\DirectX\Resource</Filter>
     </ClInclude>
+    <ClInclude Include="Header\DirectX\Dx12Wrapper.h">
+      <Filter>Header\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Audio\Audio.h">
+      <Filter>Header\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Audio\AudioManager.h">
+      <Filter>Header\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Audio\WaveAudioData.h">
+      <Filter>Header\Audio</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Math\Easing.cpp">
@@ -142,6 +160,18 @@
     </ClCompile>
     <ClCompile Include="Source\Scene\SceneManager.cpp">
       <Filter>Source\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DirectX\Dx12Wrapper.cpp">
+      <Filter>Source\DiretcX</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Audio\Audio.cpp">
+      <Filter>Source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Audio\AudioManager.cpp">
+      <Filter>Source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Audio\WaveAudioData.cpp">
+      <Filter>Source\Audio</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

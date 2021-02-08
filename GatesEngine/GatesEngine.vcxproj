@@ -126,6 +126,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Header\Application\Application.h" />
+    <ClInclude Include="Header\Audio\Audio.h" />
+    <ClInclude Include="Header\Audio\AudioManager.h" />
+    <ClInclude Include="Header\Audio\WaveAudioData.h" />
+    <ClInclude Include="Header\DirectX\Dx12Wrapper.h" />
     <ClInclude Include="Header\DirectX\Resource\VertexData.h" />
     <ClInclude Include="Header\Input\Input.h" />
     <ClInclude Include="Header\Input\Keyboard.h" />
@@ -145,6 +149,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Application\Application.cpp" />
+    <ClCompile Include="Source\Audio\Audio.cpp" />
+    <ClCompile Include="Source\Audio\AudioManager.cpp" />
+    <ClCompile Include="Source\Audio\WaveAudioData.cpp" />
+    <ClCompile Include="Source\DirectX\Dx12Wrapper.cpp" />
     <ClCompile Include="Source\Input\Input.cpp" />
     <ClCompile Include="Source\Input\Keyboard.cpp" />
     <ClCompile Include="Source\Input\Mouse.cpp" />
