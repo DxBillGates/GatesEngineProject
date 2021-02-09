@@ -6,7 +6,7 @@
 
 namespace GatesEngine
 {
-	namespace DirectX
+	namespace MyDirectX
 	{
 		//シェーダーに送るための頂点情報構造体
 		template<typename T>

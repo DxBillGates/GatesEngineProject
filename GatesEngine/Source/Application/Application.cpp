@@ -5,11 +5,22 @@ GatesEngine::Application::Application():window(Window()),input(Input::GetInstanc
 {
 	window.Create(Vector2(1280,720), "test");
 	window.PreviewWindow();
+	dx12 = new GatesEngine::MyDirectX::Dx12Wrapper(window.GetHandle(), 1280, 720);
+	input->Create(window.GetHandle(), window.GetInstance());
+}
+
+GatesEngine::Application::Application(Vector2 windowSize, const char * title)
+	:window(Window()), input(Input::GetInstance()), sceneManager(SceneManager::GetInstance())
+{
+	window.Create(windowSize, title);
+	window.PreviewWindow();
+	dx12 = new GatesEngine::MyDirectX::Dx12Wrapper(window.GetHandle(), (int)windowSize.x, (int)windowSize.y);
 	input->Create(window.GetHandle(), window.GetInstance());
 }
 
 GatesEngine::Application::~Application()
 {
+	delete dx12;
 }
 
 bool GatesEngine::Application::LoadContents()

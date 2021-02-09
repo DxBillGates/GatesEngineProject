@@ -2,6 +2,7 @@
 #include "..\Input\Input.h"
 #include "..\Window\Window.h"
 #include "..\Scene\SceneManager.h"
+#include "..\DirectX\Dx12Wrapper.h"
 namespace GatesEngine
 {
 	//アプリケーションの基底クラス
@@ -13,8 +14,10 @@ namespace GatesEngine
 		Input* input;
 		Window window;
 		SceneManager* sceneManager;
+		MyDirectX::Dx12Wrapper* dx12;
 	public:
 		Application();
+		Application(Vector2 windowSize, const char* title);
 		virtual ~Application();
 		virtual bool LoadContents();
 		virtual bool Initialize();

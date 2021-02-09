@@ -40,20 +40,20 @@
     <Filter Include="Header\DirectX">
       <UniqueIdentifier>{e9e81072-b7e1-478d-87d2-f5c8558a3648}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\DiretcX">
-      <UniqueIdentifier>{0005b367-db61-4667-abb5-f4591481dde1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header\DirectX\Resource">
       <UniqueIdentifier>{fb264b4e-42d1-4d62-9065-0075497779f2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\DiretcX\Resource">
-      <UniqueIdentifier>{b1317506-367d-4a7e-9190-7705010dc859}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header\Audio">
       <UniqueIdentifier>{5968eb87-f327-4206-a331-5a8772adce71}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\Audio">
       <UniqueIdentifier>{40f50f65-83c9-4fe0-95c1-12b256ec8bd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\DiretctX">
+      <UniqueIdentifier>{0005b367-db61-4667-abb5-f4591481dde1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\DiretctX\Resource">
+      <UniqueIdentifier>{b1317506-367d-4a7e-9190-7705010dc859}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +120,12 @@
     <ClInclude Include="Header\Audio\WaveAudioData.h">
       <Filter>Header\Audio</Filter>
     </ClInclude>
+    <ClInclude Include="Header\DirectX\COMRelease.h">
+      <Filter>Header\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\DirectX\Dx12RenderTarget.h">
+      <Filter>Header\DirectX</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Math\Easing.cpp">
@@ -162,7 +168,7 @@
       <Filter>Source\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Source\DirectX\Dx12Wrapper.cpp">
-      <Filter>Source\DiretcX</Filter>
+      <Filter>Source\DiretctX</Filter>
     </ClCompile>
     <ClCompile Include="Source\Audio\Audio.cpp">
       <Filter>Source\Audio</Filter>
@@ -172,6 +178,9 @@
     </ClCompile>
     <ClCompile Include="Source\Audio\WaveAudioData.cpp">
       <Filter>Source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DirectX\Dx12RenderTarget.cpp">
+      <Filter>Source\DiretctX</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

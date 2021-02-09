@@ -4,8 +4,10 @@
 
 Game::Game():Application()
 {
-	sceneManager->AddScene(new SampleScene("SampleScene"));
-	sceneManager->ChangeScene("SampleScene");
+}
+
+Game::Game(GatesEngine::Math::Vector2 windowSize, const char * title) :Application(windowSize, title)
+{
 }
 
 Game::~Game()
@@ -14,6 +16,8 @@ Game::~Game()
 
 bool Game::LoadContents()
 {
+	sceneManager->AddScene(new SampleScene("SampleScene"));
+	sceneManager->ChangeScene("SampleScene");
 	return true;
 }
 
@@ -29,4 +33,6 @@ bool Game::Update()
 
 void Game::Draw()
 {
+	dx12->SetRenderTarget({ 0,0,0,0 });
+	dx12->ScreenFlip();
 }
