@@ -1,7 +1,7 @@
 #include "..\..\Header\Application\Application.h"
 #include "..\..\Header\Scene\SceneManager.h"
 
-GatesEngine::Application::Application():window(Window()),input(Input::GetInstance()),sceneManager(SceneManager::GetInstance())
+GatesEngine::Application::Application():window(Window()),input(Input::GetInstance()),sceneManager(SceneManager::GetInstance()),timer(Util::Timer())
 {
 	window.Create(Vector2(1280,720), "test");
 	window.PreviewWindow();
@@ -52,6 +52,7 @@ void GatesEngine::Application::Run()
 
 	while (!input->GetKeyboard()->CheckHitKey(Keys::ESC))
 	{
+		if (timer.Wait())continue;
 		input->Update();
 		if(!Update())break;
 		sceneManager->Update();

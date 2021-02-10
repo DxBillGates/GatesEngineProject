@@ -3,6 +3,7 @@
 class Game : public GatesEngine::Application
 {
 private:
+	float t;
 public:
 	Game();
 	Game(GatesEngine::Math::Vector2 windowSize, const char* title);

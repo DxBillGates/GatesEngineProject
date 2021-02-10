@@ -55,6 +55,12 @@
     <Filter Include="Source\DiretctX\Resource">
       <UniqueIdentifier>{b1317506-367d-4a7e-9190-7705010dc859}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header\Util">
+      <UniqueIdentifier>{a4e2c5d3-54cf-468f-aeb0-a877e5cf4558}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Util">
+      <UniqueIdentifier>{7d13ae1d-07ae-4263-b3bd-18834d4f7e95}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Math\Easing.h">
@@ -126,6 +132,9 @@
     <ClInclude Include="Header\DirectX\Dx12RenderTarget.h">
       <Filter>Header\DirectX</Filter>
     </ClInclude>
+    <ClInclude Include="Header\Util\Timer.h">
+      <Filter>Header\Util</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Math\Easing.cpp">
@@ -181,6 +190,9 @@
     </ClCompile>
     <ClCompile Include="Source\DirectX\Dx12RenderTarget.cpp">
       <Filter>Source\DiretctX</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Util\Timer.cpp">
+      <Filter>Source\Util</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -3,6 +3,7 @@
 #include "..\Window\Window.h"
 #include "..\Scene\SceneManager.h"
 #include "..\DirectX\Dx12Wrapper.h"
+#include "..\Util\Timer.h"
 namespace GatesEngine
 {
 	//アプリケーションの基底クラス
@@ -11,6 +12,7 @@ namespace GatesEngine
 	{
 		using Vector2 = GatesEngine::Math::Vector2;
 	protected:
+		Util::Timer timer;
 		Input* input;
 		Window window;
 		SceneManager* sceneManager;

@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "Scene/SceneManager.h"
 #include "SampleScene.h"
+#include "..\Header\Math\Easing.h"
 
 Game::Game():Application()
 {
@@ -23,6 +24,7 @@ bool Game::LoadContents()
 
 bool Game::Initialize()
 {
+	timer.SetIsShow(false);
 	return true;
 }
 
