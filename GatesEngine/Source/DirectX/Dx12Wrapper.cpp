@@ -209,20 +209,29 @@ void GatesEngine::MyDirectX::Dx12Wrapper::CreateSwapChain(HWND hwnd)
 
 void GatesEngine::MyDirectX::Dx12Wrapper::CreateRtv()
 {
-	mRenderTarget = new MyDirectX::Dx12RenderTarget(this, 2);
+	//mRenderTarget = new MyDirectX::Dx12RenderTarget(this, 2);
 	HRESULT result;
+	//mFrameBuffer.resize(2);
+	//D3D12_RENDER_TARGET_VIEW_DESC rtvDesc = {};
+	//rtvDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM_SRGB;
+	//rtvDesc.ViewDimension = D3D12_RTV_DIMENSION_TEXTURE2D;
+	////SwapChainからバックバッファ、フロントバッファを取得しそれをもとにRTVを生成
+	//for (int i = 0; i < (int)mFrameBuffer.size(); ++i)
+	//{
+	//	result = mSwapChain->GetBuffer(i, IID_PPV_ARGS(&mFrameBuffer[i]));
+	//	D3D12_CPU_DESCRIPTOR_HANDLE rtvHeapHandle = mRenderTarget->GetHeap()->GetCPUDescriptorHandleForHeapStart();
+	//	rtvHeapHandle.ptr += i * mDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
+	//	mDevice->CreateRenderTargetView(mFrameBuffer[i], &rtvDesc, rtvHeapHandle);
+	//}
+
+	mRenderTarget = new MyDirectX::Dx12RenderTarget();
 	mFrameBuffer.resize(2);
-	D3D12_RENDER_TARGET_VIEW_DESC rtvDesc = {};
-	rtvDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM_SRGB;
-	rtvDesc.ViewDimension = D3D12_RTV_DIMENSION_TEXTURE2D;
-	//SwapChainからバックバッファ、フロントバッファを取得しそれをもとにRTVを生成
 	for (int i = 0; i < (int)mFrameBuffer.size(); ++i)
 	{
 		result = mSwapChain->GetBuffer(i, IID_PPV_ARGS(&mFrameBuffer[i]));
-		D3D12_CPU_DESCRIPTOR_HANDLE rtvHeapHandle = mRenderTarget->GetHeap()->GetCPUDescriptorHandleForHeapStart();
-		rtvHeapHandle.ptr += i * mDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
-		mDevice->CreateRenderTargetView(mFrameBuffer[i], &rtvDesc, rtvHeapHandle);
 	}
+
+	mRenderTarget->Create(this, &mFrameBuffer);
 }
 
 void GatesEngine::MyDirectX::Dx12Wrapper::CreateDsv()
