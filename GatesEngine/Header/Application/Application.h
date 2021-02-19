@@ -4,6 +4,7 @@
 #include "..\Scene\SceneManager.h"
 #include "..\DirectX\Dx12Wrapper.h"
 #include "..\Util\Timer.h"
+#include "..\Audio\AudioManager.h"
 namespace GatesEngine
 {
 	//アプリケーションの基底クラス
@@ -17,6 +18,7 @@ namespace GatesEngine
 		Window window;
 		SceneManager* sceneManager;
 		MyDirectX::Dx12Wrapper* dx12;
+		AudioManager audioManager;
 	public:
 		Application();
 		Application(Vector2 windowSize, const char* title);
@@ -32,5 +34,6 @@ namespace GatesEngine
 		Window* GetWindow();
 		SceneManager* GetSceneManager();
 		MyDirectX::Dx12Wrapper* GetDxWrapper();
+		AudioManager* GetAudioManager();
 	};
 }

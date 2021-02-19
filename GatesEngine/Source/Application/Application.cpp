@@ -84,3 +84,8 @@ GatesEngine::MyDirectX::Dx12Wrapper * GatesEngine::Application::GetDxWrapper()
 {
 	return dx12;
 }
+
+GatesEngine::AudioManager * GatesEngine::Application::GetAudioManager()
+{
+	return &audioManager;
+}

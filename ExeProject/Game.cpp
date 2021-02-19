@@ -19,6 +19,9 @@ bool Game::LoadContents()
 {
 	sceneManager->AddScene(new SampleScene("SampleScene",this));
 	sceneManager->ChangeScene("SampleScene");
+	GatesEngine::Audio::SetAudioEngine();
+	audioManager.Add(new GatesEngine::Audio(new GatesEngine::AudioData("Resources/Music/test.wav"),"testBgm"));
+	audioManager.Use("testBgm")->Start();
 	return true;
 }
 
@@ -30,11 +33,13 @@ bool Game::Initialize()
 
 bool Game::Update()
 {
+	sceneManager->Update();
 	return true;
 }
 
 void Game::Draw()
 {
 	dx12->SetRenderTarget({ 0,0,0,0 });
+	sceneManager->Draw();
 	dx12->ScreenFlip();
 }
