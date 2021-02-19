@@ -1,4 +1,5 @@
 #include "SampleScene.h"
+#include "Application/Application.h"
 #include <stdio.h>
 
 SampleScene::SampleScene():Scene()
@@ -6,6 +7,10 @@ SampleScene::SampleScene():Scene()
 }
 
 SampleScene::SampleScene(const char * sceneName):Scene(sceneName)
+{
+}
+
+SampleScene::SampleScene(const char * sceneName, GatesEngine::Application * app):Scene(sceneName,app)
 {
 }
 

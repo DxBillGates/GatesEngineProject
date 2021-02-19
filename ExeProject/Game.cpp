@@ -17,7 +17,7 @@ Game::~Game()
 
 bool Game::LoadContents()
 {
-	sceneManager->AddScene(new SampleScene("SampleScene"));
+	sceneManager->AddScene(new SampleScene("SampleScene",this));
 	sceneManager->ChangeScene("SampleScene");
 	return true;
 }

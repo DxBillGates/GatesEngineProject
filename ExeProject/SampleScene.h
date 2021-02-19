@@ -6,6 +6,7 @@ private:
 public:
 	SampleScene();
 	SampleScene(const char* sceneName);
+	SampleScene(const char* sceneName, GatesEngine::Application* app);
 	~SampleScene();
 	void Initialize();
 	void Update();

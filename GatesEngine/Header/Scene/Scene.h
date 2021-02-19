@@ -2,6 +2,7 @@
 
 namespace GatesEngine
 {
+	class Application;
 	class Scene
 	{
 	protected:
@@ -10,6 +11,7 @@ namespace GatesEngine
 	public:
 		Scene();
 		Scene(const char* sceneName);
+		Scene(const char* sceneName, Application* app);
 		virtual ~Scene();
 		virtual void Initialize() = 0;
 		virtual void Update() = 0;

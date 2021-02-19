@@ -132,6 +132,7 @@
     <ClInclude Include="Header\DirectX\COMRelease.h" />
     <ClInclude Include="Header\DirectX\Dx12RenderTarget.h" />
     <ClInclude Include="Header\DirectX\Dx12Wrapper.h" />
+    <ClInclude Include="Header\DirectX\Resource\MeshData.h" />
     <ClInclude Include="Header\DirectX\Resource\VertexData.h" />
     <ClInclude Include="Header\Input\Input.h" />
     <ClInclude Include="Header\Input\Keyboard.h" />

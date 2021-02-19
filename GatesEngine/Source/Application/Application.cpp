@@ -55,9 +55,32 @@ void GatesEngine::Application::Run()
 		if (timer.Wait())continue;
 		input->Update();
 		if(!Update())break;
-		sceneManager->Update();
 		Draw();
-		sceneManager->Draw();
 		if(!window.ProcessMessage())break;
 	}
+}
+
+GatesEngine::Util::Timer * GatesEngine::Application::GetTimer()
+{
+	return &timer;
+}
+
+GatesEngine::Input * GatesEngine::Application::GetInput()
+{
+	return input;
+}
+
+GatesEngine::Window * GatesEngine::Application::GetWindow()
+{
+	return &window;
+}
+
+GatesEngine::SceneManager * GatesEngine::Application::GetSceneManager()
+{
+	return sceneManager;
+}
+
+GatesEngine::MyDirectX::Dx12Wrapper * GatesEngine::Application::GetDxWrapper()
+{
+	return dx12;
 }

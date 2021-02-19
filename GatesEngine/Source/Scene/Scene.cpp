@@ -15,6 +15,13 @@ GatesEngine::Scene::Scene(const char * sceneName):sceneName(sceneName),changeNex
 #endif 
 }
 
+GatesEngine::Scene::Scene(const char * sceneName,Application* app) :sceneName(sceneName), changeNextSceneFlag(false)
+{
+#ifdef _DEBUG
+	printf("%sê∂ê¨\n", sceneName);
+#endif 
+}
+
 GatesEngine::Scene::~Scene()
 {
 }

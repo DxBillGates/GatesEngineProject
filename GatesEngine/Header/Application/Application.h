@@ -26,5 +26,11 @@ namespace GatesEngine
 		virtual bool Update();
 		virtual void Draw();
 		virtual void Run();
+
+		Util::Timer* GetTimer();
+		Input* GetInput();
+		Window* GetWindow();
+		SceneManager* GetSceneManager();
+		MyDirectX::Dx12Wrapper* GetDxWrapper();
 	};
 }
